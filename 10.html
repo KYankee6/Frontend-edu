@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <fieldset>
+      <legend>회원가입</legend>
+      <!-- name이 Query parameter로 넘어간다. id, class 아니다. 착각 x -->
+      <form action="join" method="get">
+        <table>
+          <tr>
+            <td><label for="username">이름</label></td>
+            <td><input type="text" name="username" id="username" /></td>
+          </tr>
+          <tr>
+            <!-- label을 누르면 password에 focus -->
+            <td><label for="password">비밀번호</label></td>
+            <td><input type="text" name="password" id="password" /></td>
+          </tr>
+          <tr>
+            <td>성별</td>
+            <td>
+              <!-- label을 누르면 id=man인 컴포넌트를 찾아서 체크 -->
+              <input type="radio" name="gender" id="man" value="m" checked />
+              <label for="man">남자</label>
+            </td>
+            <td>
+              <input type="radio" name="gender" id="woman" value="w" />
+              <label for="woman">여자</label>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="submit" value="가입" />
+            </td>
+          </tr>
+        </table>
+      </form>
+    </fieldset>
+  </body>
+</html>

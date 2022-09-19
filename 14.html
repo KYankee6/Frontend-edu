@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 스타일 태그안에서 컴마 찍지 않는다. */
+      #header {
+        width: 800px;
+        /* 상하(0), 좌우(알아서) */
+        margin: 0 auto;
+        background: red;
+      }
+
+      #wrap {
+        width: 800px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+
+      #aside {
+        width: 200px;
+        float: left;
+        background-color: blue;
+      }
+
+      #content {
+        width: 600px;
+        float: left;
+        margin: 0 auto;
+        background-color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>홍차</h1>
+    <p>홍차는 씁쓸하고 떫다. 우유와 함께 우려서 먹으면 부드럽다.</p>
+    <div id="header">
+      <h1>#Header Tag</h1>
+    </div>
+    <div id="wrap">
+      <div id="aside">
+        <h1>#aside Tag</h1>
+      </div>
+      <div id="content">
+        <h1>#content Tag</h1>
+      </div>
+    </div>
+  </body>
+</html>
