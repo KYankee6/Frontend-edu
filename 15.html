@@ -17,7 +17,7 @@
       background-color: sandybrown;
     }
     input[type="text"] {
-      background: rebeccapurple;
+      background: rgb(14, 204, 185);
     }
     input[type="password"] {
       background: grey;
@@ -25,6 +25,13 @@
     /* id 속성이 있는 tag만 */
     li[id] {
       color: yellow;
+    }
+
+    #header >h1 {
+      color: chocolate;
+    }
+    #section >h1 {
+        color: aqua;
     }
   </style>
   <body>
@@ -47,11 +54,15 @@
     </form>
 
     <div id="header">
-        <h1 class="title">Lorem ipsum</h1>
-        <div id="nav">
-            <h1>Navigation</h1>
-        </div>
+      <h1 class="title">Lorem ipsum1</h1>
+      <div id="nav">
+        <h1>Navigation2</h1>
+      </div>
     </div>
 
+    <div id="section">
+      <h1 class="title">Lorem ipsum3</h1>
+      <p>Lorem ippsum4</p>
+    </div>
   </body>
 </html>
