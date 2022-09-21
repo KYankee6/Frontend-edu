@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Document</title>
+    <script>
+        function btnClick() {
+            alert("버튼 클릭");
+        }
+
+        window.onload = function () {
+            let btn1 = document.getElementById('btn1');
+            btn1.onclick = function () {
+                this.textContent = this.textContent + "*";
+                alert("람다 함수");
+            }
+            var btns = document.querySelectorAll('.btn');
+            for (const btn of btns) {
+                btn.onclick = btnClick;
+            }
+        };
+
+    </script>
+</head>
+<body>
+<button id="btn1" class="btn">버튼1</button>
+<button id="btn2" class="btn" onclick="btnClick()">버튼2</button>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        window.onload = function () {
+            let button = document.getElementById('button');
+            button.onclick = function () {
+                alert('버튼 처리');
+                // true면 a로 이동
+                // false는 그럴 마음 없음
+                return true;
+            };
+
+            let form = document.getElementById('form');
+
+            form.onsubmit = e => {
+                console.log(e);
+                let input = document.querySelector('input[type="text"]');
+                if (input.value === '') {
+                    alert("이름을 입력하세요");
+                    e.preventDefault();
+                }
+            }
+        };
+    </script>
+</head>
+<body>
+<a href="http://naver.com" id="button">버튼</a>
+<form action="https://naver.com" id="form">
+    <input type="text" name="name">
+    <input type="submit" value="전송">
+</form>
+</body>
+</html>
